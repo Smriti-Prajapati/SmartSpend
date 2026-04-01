@@ -2,6 +2,8 @@
 
 A production-ready full-stack expense tracker built with Spring Boot + React.
 
+🌐 **Live Demo**: [https://smart-spend-orcin.vercel.app](https://smart-spend-orcin.vercel.app)
+
 ## Tech Stack
 - **Backend**: Java 17, Spring Boot 3.2, Spring Security, JWT, Hibernate/JPA
 - **Frontend**: React 18, Chart.js, React Router v6
