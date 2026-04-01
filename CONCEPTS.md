@@ -1,41 +1,151 @@
-# Java Concepts Used in SmartSpend
+# Advanced Java Concepts Used in SmartSpend
 
-**Spring Boot** — Framework that makes it easy to build Java web applications with minimal setup.
+---
 
-**Dependency Injection** — Spring automatically creates and provides objects wherever they are needed, so you don't create them manually.
+## 1. Spring Boot Framework
+Spring Boot is used as the core backend framework to simplify application development. It provides auto-configuration, embedded servers, and production-ready features.
 
-**REST API** — A way for the frontend and backend to communicate using HTTP requests like GET, POST, PUT, DELETE.
+Key Usage:
+- Rapid backend development
+- REST API creation
+- Dependency management
 
-**JPA / Hibernate** — Automatically maps Java classes to database tables so you don't have to write SQL for basic operations.
+---
 
-**Spring Data JPA** — Generates database queries automatically just by writing method names in the repository interface.
+## 2. RESTful API Development
+The application follows REST architecture for communication between frontend and backend.
 
-**Spring Security** — Handles login, logout, and controls who can access which parts of the application.
+HTTP Methods Used:
+- GET → Retrieve data
+- POST → Create new records
+- PUT → Update existing records
+- DELETE → Remove records
 
-**JWT (JSON Web Token)** — A token given to the user after login. The user sends this token with every request to prove their identity.
+---
 
-**BCrypt** — A method to securely hash passwords before storing them in the database so they can't be read if the database is leaked.
+## 3. MVC (Model-View-Controller) Architecture
+The project is structured using MVC design pattern.
 
-**CORS** — A setting that allows the React frontend to communicate with the Spring backend since they run on different ports.
+Components:
+- Model → Represents data and database entities
+- View → Frontend UI (HTML, CSS, JS)
+- Controller → Handles requests and responses
 
-**DTO (Data Transfer Object)** — A simple class used to send only the required data between the frontend and backend.
+Benefit:
+- Clean code structure
+- Easy maintenance and scalability
 
-**Bean Validation** — Annotations like @NotBlank and @Email that automatically check if the data sent by the user is valid.
+---
 
-**Streams API** — A Java feature to process lists of data in a clean and readable way, like filtering, mapping, and sorting.
+## 4. Java Persistence API (JPA) & Hibernate
+Used for Object Relational Mapping (ORM) to interact with the database.
 
-**Optional** — A Java feature to safely handle cases where a value might be missing, avoiding null errors.
+Features:
+- Maps Java objects to database tables
+- Reduces boilerplate SQL code
+- Supports CRUD operations
 
-**CommandLineRunner** — Runs a piece of code automatically when the application starts, used here to add default categories to the database.
+---
 
-**Environment Variables** — Configuration values like database password and JWT secret stored outside the code so they stay secure in production.
+## 5. Database Connectivity (JDBC Concepts)
+Underlying database operations are based on JDBC principles for connecting Java applications with MySQL.
 
-**HikariCP** — A connection pool that reuses database connections instead of creating a new one for every request, making the app faster.
+---
 
-**JPQL** — A query language similar to SQL but written using Java class names instead of database table names.
+## 6. MySQL Database Integration
+Used as the primary database to store application data.
 
-**ResponseEntity** — Used to send HTTP responses with a specific status code like 200 OK or 400 Bad Request from the controller.
+Tables Include:
+- Users
+- Expenses
+- Income
+- Categories
 
-**Cascade** — A JPA feature where deleting a parent record automatically deletes all related child records.
+---
 
-**@PreUpdate** — A method that runs automatically before saving an updated record to the database, used to set the updated timestamp.
+## 7. Dependency Injection (DI)
+Spring Boot uses Dependency Injection to manage object creation and dependencies.
+
+Advantages:
+- Loose coupling
+- Better testability
+- Improved modularity
+
+---
+
+## 8. Authentication & Security (JWT + BCrypt)
+Security is implemented using modern techniques.
+
+Features:
+- Password hashing using BCrypt
+- JWT (JSON Web Token) for authentication
+- Secure login and session handling
+
+---
+
+## 9. Exception Handling
+Custom and global exception handling is implemented to ensure smooth application performance.
+
+Benefits:
+- Prevents crashes
+- Provides meaningful error messages
+
+---
+
+## 10. Validation (Input Handling)
+Input validation is used to ensure correct and secure data entry.
+
+Examples:
+- Required fields validation
+- Data type checks
+- Preventing invalid inputs
+
+---
+
+## 11. Build Tool (Maven)
+Maven is used for project build and dependency management.
+
+Functions:
+- Handles external libraries
+- Automates build process
+
+---
+
+## 12. Multithreading (Conceptual)
+The application handles multiple user requests simultaneously, based on multithreading concepts used in web servers.
+
+---
+
+## 13. API Integration
+Frontend and backend are connected using APIs.
+
+Purpose:
+- Data exchange between UI and server
+- Real-time updates
+
+---
+
+## 14. Layered Architecture
+The application follows a layered structure:
+- Controller Layer → Handles HTTP requests
+- Service Layer → Business logic
+- Repository Layer → Database operations
+
+---
+
+## 15. Session Management
+User sessions are managed securely using JWT tokens instead of traditional session tracking.
+
+---
+
+## 16. CRUD Operations
+Core operations implemented:
+- Create → Add expenses/income
+- Read → View transactions
+- Update → Modify entries
+- Delete → Remove records
+
+---
+
+## 17. Data Serialization (JSON)
+Data is transferred between frontend and backend in JSON format.
