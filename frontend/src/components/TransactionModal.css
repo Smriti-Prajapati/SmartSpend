@@ -1,0 +1,55 @@
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15,23,42,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 16px;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+.modal-box {
+  background: var(--surface);
+  border-radius: 20px;
+  width: 100%; max-width: 480px;
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.25s ease;
+}
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 24px 0;
+}
+.modal-header h3 { font-size: 18px; font-weight: 700; color: var(--text); }
+.modal-close {
+  background: var(--bg); border: none; border-radius: 8px;
+  width: 32px; height: 32px; font-size: 14px; color: var(--text-muted);
+  transition: all 0.15s;
+}
+.modal-close:hover { background: var(--border); color: var(--text); }
+
+.modal-form { padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 10px 14px; border: 1.5px solid var(--border);
+  border-radius: 10px; font-size: 14px; background: var(--bg);
+  color: var(--text); outline: none; transition: border-color 0.2s;
+  resize: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--primary-light);
+}
+
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px; }
+.btn-cancel {
+  padding: 10px 20px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: none; color: var(--text-muted); font-size: 14px; font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-cancel:hover { background: var(--bg); color: var(--text); }
+.btn-save {
+  padding: 10px 24px; border-radius: 10px; border: none;
+  background: var(--primary); color: #fff; font-size: 14px; font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-save:hover:not(:disabled) { background: var(--primary-dark); }
+.btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
