@@ -58,7 +58,7 @@ export default function Profile() {
         <div>
           <h2 className="profile-name">{profile.name}</h2>
           <p className="profile-email">{profile.email}</p>
-          <p className="profile-since">Member since {new Date(profile.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</p>
+          <p className="profile-since">Member since {profile.createdAt ? new Date(profile.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : 'N/A'}</p>
         </div>
       </div>
 
