@@ -1,1 +1,1 @@
--- H2 compatible seed (categories are seeded by DataInitializer.java, this file is intentionally empty)
+SELECT 1;
