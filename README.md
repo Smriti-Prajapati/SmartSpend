@@ -1,4 +1,4 @@
-# SmartSpend — Smart Expense Tracker
+# SmartSpend — Smart Expense Tracker Using Advanced Java Program
 
 A production-ready full-stack expense tracker built with Spring Boot + React.
 
